@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="text-xl mb-4">Enter Text to Check for Plagiarism</h2>
+    <form action="/detect" method="post">
+        <textarea name="text" rows="10" class="w-full p-2 border border-gray-300" placeholder="Paste your text here..."></textarea>
+        <button type="submit" class="bg-blue-500 text-white p-2 mt-2">Detect Plagiarism</button>
+    </form>
+{% endblock %}
