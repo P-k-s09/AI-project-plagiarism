@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="text-xl mb-4">Plagiarism Detection Results</h2>
+    <p>Overall Score: {{ result.score }}</p>
+    <h3 class="mt-4">Matches:</h3>
+    <ul>
+        {% for match in result.matches %}
+            <li>{{ match.text }} - Similarity: {{ match.similarity }}%</li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="text-blue-500">Check another text</a>
+{% endblock %}
